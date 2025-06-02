@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Notas</h1>
+        <p class="sub">Verifique quanto você precisa na prova final</p>
+        
+        <div id="div_ap">
+            <h3>Calcule a média das APs</h3>
+            <form id="form_aps">
+                <label for="">AP1</label>
+                <input type="text" name="ap1" id="ap1" placeholder="Digite sua nota da AP1" required>
+                <label for="">AP2</label>
+                <input type="text" name="ap2" id="ap2" placeholder="Digite sua nota da AP2" required>
+                <p id="ap_res" style="display: none;"></p>
+                <div class="button-group">
+                    <button type="submit" onclick="calcularMediaAPs()">Calcular</button>
+                    <button type="reset" onclick="limparAP()">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="div_pai">
+            <h3>Calcule a média da PAI</h3>
+            <form id="form_pai">
+                <label for="">PAI 1</label>
+                <input type="text" name="pai1" id="pai1" placeholder="Digite sua nota da PAI 1" required>
+                <label for="">PAI 2</label>
+                <input type="text" name="pai2" id="pai2" placeholder="Digite sua nota da PAI 2" required>
+                <label for="">PAI 3</label>
+                <input type="text" name="pai3" id="pai3" placeholder="Digite sua nota da PAI 3" required>
+                <p id="pai_res" style="display: none;"></p>
+                <div class="button-group">
+                    <button type="submit" onclick="calcularMediaPAI()">Calcular</button>
+                    <button type="reset" onclick="limparPAI()">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="div_res">
+            <h3>Qual nota você precisa?</h3>
+            <form id="form_np">
+                <label for="">Média das APs</label>
+                <input type="text" name="maps" id="maps" placeholder="Digite a média das APs" required>
+                <label for="">Média da PAI</label>
+                <input type="text" name="mpai" id="mpai" placeholder="Digite a média da PAI" required>
+                <p id="np_res" style="display: none;"></p>
+                <div class="button-group">
+                    <button type="submit" onclick="quantoFalta()">Calcular</button>
+                    <button type="reset" onclick="limparNP()">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <button id="rec" type="reset" onclick="Reset()">Recomeçar</button>
+    </div>
+
+    
+
+    <footer>&copy; 2025 <a href="https://github.com/Felipewv93">Felipe Wilson Viana</a> All rights reserved.</footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
