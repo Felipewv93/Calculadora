@@ -1,4 +1,4 @@
-📊 Calculadora de Médias
+📊 Calculadora de Notas
 
 Aplicação web simples para calcular a média aritmética e ponderada das APs e Provas PAI, e saber o quanto você precisa na Prova Final.
 
