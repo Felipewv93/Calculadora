@@ -4,13 +4,9 @@ function calcularMediaAPs() {
         e.preventDefault();
         let nap1 = document.getElementById('ap1')
         let n1 = parseFloat(nap1.value)
-        if (isNaN(n1) || n1 < 0 || n1 > 10) {
-            alert('Por favor, insira uma nota válida.')
-            return
-        }
         let nap2 = document.getElementById('ap2')
         let n2 = parseFloat(nap2.value)
-        if (isNaN(n2) || n2 < 0 || n2 > 10) {
+        if (isNaN(n1) || n1 < 0 || n1 > 10 || isNan(n2) || n2 < 0 || n2 > 10 {
             alert('Por favor, insira uma nota válida.')
             return
         }
@@ -29,12 +25,24 @@ function calcularMediaPAI() {
         e.preventDefault();
         let notas_pai = []
         let npai1 = document.getElementById('pai1')
+        if (isNaN(npai1) || npai < 0 || npai1 > 50) {
+            alert('Por favor, insira uma nota válida.')
+            return
+        }
         let p1 = parseFloat(npai1.value) / 5
         notas_pai.push(p1)
         let npai2 = document.getElementById('pai2')
+        if (isNaN(npai2) || npai2 < 0 || npai2 > 100) {
+            alert('Por favor, insira uma nota válida.')
+            return
+        }
         let p2 = parseFloat(npai2.value) / 10
         notas_pai.push(p2)
         let npai3 = document.getElementById('pai3')
+        if (isNaN(npai3) || npa3 < 0 || npai3 > 100) {
+            alert('Por favor, insira uma nota válida.')
+            return
+        }
         let p3 = parseFloat(npai3.value) / 10
         notas_pai.push(p3)
         notas_pai.sort((a, b) => a - b)
@@ -53,8 +61,16 @@ function quantoFalta() {
     PN.addEventListener('submit', function(e) {
         e.preventDefault();
         let m_ap = document.getElementById('maps')
+        if (isNan(m_ap) || m_ap < 0 || m_ap > 10) {
+            alert('Por favor, insira uma nota válida.)
+            return
+        }
         let pond_ap = parseFloat(m_ap.value) * 0.3
         let m_pai = document.getElementById('mpai')
+        if (isNan(m_pai) || m_pai < 0 || m_pai > 10) {
+            alert('Por favor, insira uma nota válida.)
+            return
+        }
         let pond_pai = parseFloat(m_pai.value) * 0.3
         let qf = (6 - (pond_ap + pond_pai)) / 0.4
         let np = document.getElementById('np_res')
