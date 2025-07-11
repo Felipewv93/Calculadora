@@ -4,10 +4,14 @@ function calcularMediaAPs() {
         e.preventDefault();
         let nap1 = document.getElementById('ap1')
         let n1 = parseFloat(nap1.value)
+        if (isNaN(n1) || n1 < 0 || n1 > 10) {
+            alert('Por favor, insira uma nota válida.')
+            return
+        }
         let nap2 = document.getElementById('ap2')
         let n2 = parseFloat(nap2.value)
-        if (isNaN(n1) || isNaN(n2)) {
-            alert('Por favor, insira apenas números válidos.')
+        if (isNaN(n2) || n2 < 0 || n2 > 10) {
+            alert('Por favor, insira uma nota válida.')
             return
         }
         let med_ap = (n1 + n2) / 2
