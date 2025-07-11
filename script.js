@@ -6,6 +6,10 @@ function calcularMediaAPs() {
         let n1 = parseFloat(nap1.value)
         let nap2 = document.getElementById('ap2')
         let n2 = parseFloat(nap2.value)
+        if (isNaN(n1) || isNaN(n2)) {
+            alert('Por favor, insira apenas números válidos.')
+            return
+        }
         let med_ap = (n1 + n2) / 2
         let ap_pond = med_ap * 0.3
         let aps_res = document.getElementById('ap_res')
