@@ -4,10 +4,14 @@ function calcularMediaAPs() {
         e.preventDefault();
         let nap1 = document.getElementById('ap1')
         let n1 = parseFloat(nap1.value)
+        if (isNaN(n1) || n1 < 0 || n1 > 10) {
+            alert('Por favor, insira uma nota válida para a AP1.')
+            return
+        }
         let nap2 = document.getElementById('ap2')
         let n2 = parseFloat(nap2.value)
-        if (isNaN(n1) || n1 < 0 || n1 > 10 || isNaN(n2) || n2 < 0 || n2 > 10 {
-            alert('Por favor, insira uma nota válida.')
+        if (isNaN(n2) || n2 < 0 || n2 > 10) {
+            alert('Por favor, insira uma nota válida para a AP2.')
             return
         }
         let med_ap = (n1 + n2) / 2
@@ -26,22 +30,22 @@ function calcularMediaPAI() {
         let notas_pai = []
         let npai1 = document.getElementById('pai1')
         let p1 = parseFloat(npai1.value)
-        if (isNaN(p1) || p1 < 0 || p1 > 100) {
-            alert('Por favor, insira uma nota válida.')
+        if (isNaN(p1) || p1 < 0 || p1 > 50) {
+            alert('Por favor, insira uma nota válida para a PAI1.')
             return
         }
         notas_pai.push(p1 / 5)
         let npai2 = document.getElementById('pai2')
         let p2 = parseFloat(npai2.value)
-        if (isNaN(p2) || p2 < 0 || p2 > 10) {
-            alert('Por favor, insira uma nota válida.')
+        if (isNaN(p2) || p2 < 0 || p2 > 100) {
+            alert('Por favor, insira uma nota válida para a PAI2.')
             return
         }
         notas_pai.push(p2 / 10)
         let npai3 = document.getElementById('pai3')
         let p3 = parseFloat(npai3.value)
-         if (isNaN(p3) || p3 < 0 || p3 > 10) {
-            alert('Por favor, insira uma nota válida.')
+         if (isNaN(p3) || p3 < 0 || p3 > 100) {
+            alert('Por favor, insira uma nota válida para a PAI3.')
             return
         }
         notas_pai.push(p3 / 10)
@@ -62,15 +66,15 @@ function quantoFalta() {
         e.preventDefault();
         let m_ap = document.getElementById('maps')
         let map = parseFloat(m_ap.value)
-        if (isNaN(map) || m_ap < 0 || m_ap > 10) {
-            alert('Por favor, insira uma nota válida.')
+        if (isNaN(map) || map < 0 || map > 10) {
+            alert('Por favor, insira uma nota válida para a média das APs.')
             return
         }
         let pond_ap = map * 0.3
         let m_pai = document.getElementById('mpai')
         let pai = parseFloat(m_pai.value)
-        if (isNan(pai) || pai < 0 || pai > 10) {
-            alert('Por favor, insira uma nota válida.')
+        if (isNaN(pai) || pai < 0 || pai > 10) {
+            alert('Por favor, insira uma nota válida para a média das PAI.')
             return
         }
         let pond_pai = pai * 0.3
