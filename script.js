@@ -88,7 +88,13 @@ function quantoFalta() {
         let pond_pai = pai * 0.3
         let qf = (6 - (pond_ap + pond_pai)) / 0.4
         let np = document.getElementById('np_res')
-        np.innerHTML = `Você precisa de <strong>${qf.toFixed(2)}</strong> na prova final.`
+        if (qf <= 0) {
+            np.innerHTML = 'Parabéns, você já está aprovado!'
+        } else if (qf > 10) {
+            np.innerHTML = 'Sinto muito, não é mais possível atingir nota para ser aprovado.'
+        } else {
+            np.innerHTML = `Você precisa de <strong>${qf.toFixed(2)}</strong> na prova final.`
+        }
         np.style.display = 'block'
     });
 }
