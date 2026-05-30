@@ -34,7 +34,7 @@ function calcularMediaPAI() {
         let notas_pai = []
         let npai1 = document.getElementById('pai1')
         let p1 = parseFloat(npai1.value)
-        if (isNaN(p1) || p1 < 0 || p1 > 50) {
+        if (isNaN(p1) || p1 < 0 || p1 > 100) {
             erros.push('PAI 1')
         }
         let npai2 = document.getElementById('pai2')
@@ -51,11 +51,24 @@ function calcularMediaPAI() {
             alert(`Por favor, insira notas válidas para: ${erros.join(', ')}.`);
             return;
         }
-        notas_pai.push(p1 / 5)
-        notas_pai.push(p2 / 10)
-        notas_pai.push(p3 / 10)
+        notas_pai.push(p1)
+        notas_pai.push(p2)
+        notas_pai.push(p3)
         notas_pai.sort((a, b) => a - b)
         notas_pai.shift()
+        notas_pai = notas_pai.map((nota) => {
+            if (nota >= 80 && nota <= 100) {
+                return 10
+            } else if (nota >= 70 && nota < 80) {
+                return 8
+            } else if (nota >= 50 && nota < 70) {
+                return 7
+            } else if (nota < 50) {
+                return nota / 10
+            }
+            alert('Nota inválida.')
+            return nota
+        })
         let med_pai = notas_pai.reduce((soma, nota) => soma + nota, 0) / 2
         let pai_pond = med_pai * 0.3
         let p_res = document.getElementById('pai_res')
