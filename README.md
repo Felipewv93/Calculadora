@@ -6,7 +6,7 @@ Aplicação web simples para calcular a média aritmética e ponderada das APs e
 
 <img width="1107" height="603" alt="image" src="https://github.com/user-attachments/assets/b3a8a00c-a15e-4ceb-a892-9ead9c6bdbd8" />
 
-Acesse a aplicação online: [felipewv93.github.io/Calculadora](https://felipewv93.github.io/Calculadora/)
+Acesse a aplicação online: [Calculadora de Notas](https://calculadora-nota-prova.vercel.app/)
 
 ## Tecnologias Utilizadas
 
